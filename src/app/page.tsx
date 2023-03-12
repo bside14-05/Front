@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import Input, { Iprops as InputPropsType } from "@/components/common/Input";
+import RecoilWrapper from "./recoilWrapper";
 
 function Home() {
   const [value, setValue] = useState<{ [key: string]: string }>({});
@@ -11,14 +12,16 @@ function Home() {
   };
 
   return (
-    <div className="h-full w-full bg-fuchsia-400">
-      <Input
-        type="normal"
-        name={"test"}
-        value={value["test"] ?? ""}
-        onChange={onChangeInput}
-      />
-    </div>
+    <RecoilWrapper>
+      <div className="h-full w-full bg-fuchsia-400">
+        <Input
+          type="normal"
+          name={"test"}
+          value={value["test"] ?? ""}
+          onChange={onChangeInput}
+        />
+      </div>
+    </RecoilWrapper>
   );
 }
 
