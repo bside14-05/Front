@@ -5,14 +5,14 @@ import { atom, selector } from "recoil";
 type AuthUser = null | Record<string, any>;
 
 export type AuthState = {
-  isAuthenticated: boolean;
+  isAuthenticated: boolean | null;
   user: AuthUser;
 };
 
 export const authAtom = atom<AuthState>({
   key: "auth",
   default: {
-    isAuthenticated: false,
+    isAuthenticated: null,
     user: null,
   },
 });
