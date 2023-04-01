@@ -1,25 +1,50 @@
 "use client";
-import { useState } from "react";
 
-import Input, { Iprops as InputPropsType } from "@/components/common/Input";
+import React from "react";
 
-function Home() {
-  const [value, setValue] = useState<{ [key: string]: string }>({});
+import Footer from "@/components/my/Footer";
+import Header from "@/components/my/Header";
+import LikeList from "@/components/my/main/LikeList";
 
-  const onChangeInput: InputPropsType["onChange"] = (name, value) => {
-    setValue((prev) => ({ ...prev, [name]: value }));
+import { PATH_MENU } from "@/paths/path";
+import { useRouter } from "next/navigation";
+
+const LIST = [
+  { id: 0, title: "서점", adress: "00시 00구" },
+  { id: 1, title: "서점2", adress: "00시 00구2" },
+];
+
+function Main() {
+  const [hydrated, setHydrated] = React.useState(false);
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(PATH_MENU.my.main);
   };
 
+  React.useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  if (!hydrated) return <></>;
+
   return (
-    <div className="h-full w-full bg-fuchsia-400">
-      <Input
-        type="normal"
-        name={"test"}
-        value={value["test"] ?? ""}
-        onChange={onChangeInput}
-      />
+    <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
+      <Header />
+      <div className="h-48 bg-black" onClick={handleClick}></div>
+      <div>
+        <LikeList category="찜한 서점" list={LIST} />
+      </div>
+      <div>
+        <LikeList category="찜한 프로그램" list={LIST} />
+      </div>
+      <div>
+        <LikeList category="서점" list={LIST} />
+      </div>
+      <Footer />
     </div>
   );
 }
 
-export default Home;
+export default Main;
