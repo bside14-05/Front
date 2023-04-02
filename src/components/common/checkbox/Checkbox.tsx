@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import Icon from "../icon";
 
@@ -9,7 +11,7 @@ interface CheckboxProps {
   disabled?: boolean; // 선택불가능
 }
 
-export function Checkbox({
+function Checkbox({
   checked,
   onToggle,
   text,
@@ -33,7 +35,7 @@ export function Checkbox({
       />
       <span
         className={cn(
-          "relative flex justify-center items-center border w-[1.125em] h-[1.125em]",
+          "relative flex justify-center items-center border w-[1.25em] h-[1.25em]",
           disabled && "bg-[#D1D1D1] border-none",
           checked && `bg-[#111111] border-none`
         )}
@@ -49,3 +51,5 @@ export function Checkbox({
     </label>
   );
 }
+
+export default Checkbox;
