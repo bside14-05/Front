@@ -11,7 +11,7 @@ const LIST = [
   { id: 1, title: "서점2", adress: "00시 00구2" },
 ];
 
-const Info = dynamic(() => import("@/components/my/main/info"), {
+const Info = dynamic(() => import("@/components/my/main/Info"), {
   ssr: false,
 });
 
