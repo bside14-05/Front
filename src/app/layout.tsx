@@ -11,8 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html>
+      <body className="">
         <div>{children}</div>
         <div id="modal"></div>
       </body>

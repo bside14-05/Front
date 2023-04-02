@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from "@storybook/react";
-import { Icon } from "./Icon";
+import Icon from "./Icon";
 import * as vectors from "./vectors";
 
 export default {
@@ -9,7 +9,7 @@ export default {
 
 const Template: StoryFn<typeof Icon> = (args) => {
   return (
-    <div className="w-10 h-10">
+    <div className="w-10 h-10 flex justify-center items-center">
       <Icon {...args} />
     </div>
   );
@@ -24,10 +24,12 @@ export function AllIcons() {
   const keys = Object.keys(vectors) as (keyof typeof vectors)[];
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div className="flex flex-wrap gap-4">
       {keys.map((name) => (
         <div key={name} className="flex flex-col justify-center items-center">
-          <Icon name={name} />
+          <div className="w-10 h-10 flex justify-center items-center">
+            <Icon name={name} />
+          </div>
           <div>{name}</div>
         </div>
       ))}
