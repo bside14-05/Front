@@ -3,8 +3,6 @@ name: deploy next to ncloud (develop)
 on:
   push:
     branches: ["develop"]
-  pull_request:
-    branches: ["develop"]
 
 jobs:
   push_to_registry:
