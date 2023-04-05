@@ -15,13 +15,14 @@ function Checkbox({
   checked,
   onToggle,
   text,
-  size = "sm",
+  size = "md",
   disabled,
 }: CheckboxProps) {
   return (
     <label
       className={cn(
         "relative inline-flex items-center gap-2",
+        size === "sm" && "text-sm",
         size === "md" && "text-lg",
         size === "lg" && "text-3xl"
       )}
