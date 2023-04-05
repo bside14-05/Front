@@ -4,6 +4,7 @@ import Button from "@/components/common/button";
 import Checkbox from "@/components/common/checkbox";
 import Modal from "@/components/common/modal";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function LoginAgreePage() {
@@ -20,18 +21,20 @@ function LoginAgreePage() {
   }, [checkedOne, checkedTwo]);
 
   return (
-    <section className="h-full flex flex-col justify-between px-4  -mt-10">
-      <div className="grow bg-[#E1E1E1] w-full h-48 flex justify-center items-center my-28">
-        <Image
-          src="/images/logo.png"
-          alt="logo image"
-          width={200}
-          height={200}
-        />
+    <section className="h-full flex flex-col justify-between px-4 -mt-10">
+      <div className="grow flex items-center">
+        <div className="bg-[#E1E1E1]/20 w-full h-48 flex justify-center items-center my-28">
+          <Image
+            src="/images/logo.png"
+            alt="logo image"
+            width={200}
+            height={200}
+          />
+        </div>
       </div>
 
       <div>
-        <div className="px-4 pt-6 mb-10 border-t-2">
+        <div className="px-4 pt-6 mb-12 border-t border-black">
           <div className="pb-4">
             <Checkbox
               checked={checkedAll}
@@ -56,7 +59,21 @@ function LoginAgreePage() {
               onToggle={() => {
                 setCheckedOne(!checkedOne);
               }}
-              text="[필수] 이용약관과 개인정보 처리방침에 동의합니다."
+              text={[
+                "[필수] ",
+                <Link href="#" key="1">
+                  <p className="inline underline underline-offset-[3px]">
+                    이용약관
+                  </p>
+                </Link>,
+                "과 ",
+                <Link href="#" key="2">
+                  <p className="inline underline underline-offset-[3px]">
+                    개인정보 처리방침
+                  </p>
+                </Link>,
+                "에 동의합니다.",
+              ]}
               size="sm"
             />
             <Checkbox

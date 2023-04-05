@@ -37,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "autoprefixer": "^10.4.13",
+    "chromatic": "^6.17.3",
     "eslint": "8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "postcss": "^8.4.21",

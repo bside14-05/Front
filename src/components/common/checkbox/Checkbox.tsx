@@ -6,22 +6,23 @@ import Icon from "../icon";
 interface CheckboxProps {
   checked: boolean;
   onToggle: () => void;
-  text?: string;
+  text?: string | any[];
   size?: "sm" | "md" | "lg";
-  disabled?: boolean; // 선택불가능
+  disabled?: boolean; // 선택 불가능
 }
 
 function Checkbox({
   checked,
   onToggle,
   text,
-  size = "sm",
+  size = "md",
   disabled,
 }: CheckboxProps) {
   return (
     <label
       className={cn(
-        "relative inline-flex items-center gap-2",
+        "relative inline-flex items-start gap-2",
+        size === "sm" && "text-sm",
         size === "md" && "text-lg",
         size === "lg" && "text-3xl"
       )}
@@ -35,7 +36,7 @@ function Checkbox({
       />
       <span
         className={cn(
-          "relative flex justify-center items-center border w-[1.25em] h-[1.25em]",
+          "relative flex justify-center items-center border w-[1.25em] h-[1.25em] flex-none",
           disabled && "bg-[#D1D1D1] border-none",
           checked && `bg-[#111111] border-none`
         )}
