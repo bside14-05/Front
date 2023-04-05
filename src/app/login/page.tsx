@@ -5,7 +5,7 @@ import Image from "next/image";
 function LoginPage() {
   return (
     <section className="h-full flex flex-col justify-center items-cente px-4 gap-6 -mt-10">
-      <div className="bg-[#E1E1E1] w-full h-48 flex justify-center items-center">
+      <div className="bg-[#E1E1E1]/20 w-full h-48 flex justify-center items-center">
         <Image
           src="/images/logo.png"
           alt="logo image"
