@@ -8,7 +8,7 @@ interface IconProps {
   className?: string;
 }
 
-function Icon({ name, className = "stroke-black" }: IconProps) {
+function Icon({ name, className }: IconProps) {
   const Vector = vectors[name];
   return <Vector className={className} />;
 }

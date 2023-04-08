@@ -1,12 +1,13 @@
 "use client";
 
+import { ReactElement } from "react";
 import { cn } from "@/lib/utils";
 import Icon from "../icon";
 
 interface CheckboxProps {
   checked: boolean;
   onToggle: () => void;
-  text?: string | any[];
+  text?: string | (string | ReactElement)[];
   size?: "sm" | "md" | "lg";
   disabled?: boolean; // 선택 불가능
 }
@@ -34,11 +35,11 @@ function Checkbox({
         className="_hidden"
         disabled={disabled}
       />
-      <span
+      <div
         className={cn(
-          "relative flex justify-center items-center border w-[1.25em] h-[1.25em] flex-none",
-          disabled && "bg-[#D1D1D1] border-none",
-          checked && `bg-[#111111] border-none`
+          "relative flex justify-center items-center border w-[1.25em] h-[1.25em] flex-none mt-[3px]",
+          disabled && "bg-[#D1D1D1] border-[#D1D1D1]",
+          checked && `bg-[#111111] border-[#111111]`
         )}
       >
         <Icon
@@ -47,7 +48,7 @@ function Checkbox({
             checked || disabled ? "stroke-white" : "stroke-[#D1D1D1]"
           )}
         />
-      </span>
+      </div>
       {text && <span>{text}</span>}
     </label>
   );
