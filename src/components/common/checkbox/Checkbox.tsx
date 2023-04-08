@@ -31,7 +31,7 @@ function Checkbox({
         type="checkbox"
         checked={checked}
         onChange={onToggle}
-        className="absolute left-0 top-0 w-0 h-0"
+        className="_hidden"
         disabled={disabled}
       />
       <span
