@@ -5,6 +5,8 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-docs",
+    "@storybook/addon-viewport",
   ],
   webpackFinal: async (config) => {
     const imageRule = config.module?.rules?.find((rule) => {
