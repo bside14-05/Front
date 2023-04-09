@@ -5,6 +5,14 @@ import Checkbox from "./Checkbox";
 export default {
   title: "Components/common/Checkbox",
   component: Checkbox,
+  tags: ["autodocs"],
+  argTypes: {
+    text: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 } as Meta<typeof Checkbox>;
 
 //👇 We create a “template” of how args map to rendering

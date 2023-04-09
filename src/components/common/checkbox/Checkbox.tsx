@@ -7,15 +7,21 @@ import Icon from "../icon";
 interface CheckboxProps {
   checked: boolean;
   onToggle: () => void;
+  /**
+   * Text to display next to the checkbox.
+   */
   text?: string | (string | ReactElement)[];
   size?: "sm" | "md" | "lg";
   disabled?: boolean; // 선택 불가능
 }
 
+/**
+ * Checkbox is used to display a boolean value.
+ */
 function Checkbox({
   checked,
   onToggle,
-  text,
+  text = "",
   size = "md",
   disabled,
 }: CheckboxProps) {
