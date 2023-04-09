@@ -8,7 +8,7 @@ interface AuthLayoutProps {
 }
 
 function AuthLayout({ children }: AuthLayoutProps) {
-  return <main className="h-screen">{children}</main>;
+  return <main className="h-screen max-w-screen-md mx-auto">{children}</main>;
 }
 
 export default AuthLayout;

@@ -19,8 +19,11 @@ function Modal({ visible, closable, maskClosable, onClose }: ModalProps) {
   return (
     <Portal selector="modal">
       <div className="w-screen h-screen bg-black/50 absolute top-0 left-0 flex justify-center items-center">
-        <div className="relative bg-white mx-4 flex flex-col justify-between gap-1">
-          <div className="absolute top-6 right-6" onClick={onClose}>
+        <div className="max-w-screen-md relative bg-white mx-4 flex flex-col justify-between gap-1">
+          <div
+            className="absolute top-6 right-6 cursor-pointer"
+            onClick={onClose}
+          >
             <Icon name="close" />
           </div>
 
