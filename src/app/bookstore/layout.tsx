@@ -8,5 +8,7 @@ interface BookStoreLayoutProps {
 }
 
 export default function BookStoreLayout({ children }: BookStoreLayoutProps) {
-  return <main className="h-screen max-w-screen-md mx-auto">{children}</main>;
+  return (
+    <main className="min-h-screen max-w-screen-md mx-auto">{children}</main>
+  );
 }
