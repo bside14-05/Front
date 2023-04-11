@@ -1,8 +1,14 @@
+"use client";
+import { useState } from "react";
+
 import Footer from "@/components/my/Footer";
 import Card from "@/components/template/Card";
 import Header from "@/components/template/Header";
+import { FilterBottomSheet } from "@/components/bookstore/BottomSheet";
 
 export default function BookStorePage() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <>
       <Header />
@@ -17,7 +23,10 @@ export default function BookStorePage() {
           <li className="pb-4">프로그램</li>
         </ul>
 
-        <div className="bg-[#E1E1E1]/20 w-full h-10 flex justify-center items-center mb-5">
+        <div
+          className="bg-[#E1E1E1]/20 w-full h-10 flex justify-center items-center mb-5"
+          onClick={() => setModalVisible(true)}
+        >
           태그 영역
         </div>
 
@@ -28,6 +37,10 @@ export default function BookStorePage() {
         </section>
       </div>
       <Footer />
+
+      {modalVisible && (
+        <FilterBottomSheet onClose={() => setModalVisible(!modalVisible)} />
+      )}
     </>
   );
 }
