@@ -5,12 +5,13 @@ import * as vectors from "./vectors";
 export default {
   title: "Components/common/Icon",
   component: Icon,
+  tags: ["autodocs"],
 } as Meta<typeof Icon>;
 
 const Template: StoryFn<typeof Icon> = (args) => {
   return (
     <div className="w-10 h-10 flex justify-center items-center">
-      <Icon {...args} />
+      <Icon className="stroke-black" {...args} />
     </div>
   );
 };
@@ -28,7 +29,7 @@ export function AllIcons() {
       {keys.map((name) => (
         <div key={name} className="flex flex-col justify-center items-center">
           <div className="w-10 h-10 flex justify-center items-center">
-            <Icon name={name} />
+            <Icon name={name} className="stroke-black" />
           </div>
           <div>{name}</div>
         </div>

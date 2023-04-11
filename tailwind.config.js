@@ -9,7 +9,18 @@ module.exports = {
       sm: { min: "375px", max: "767px" },
       md: "768px",
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        "bottom-sheet-up": {
+          "0%": { transform: "translateY(420px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "bottom-sheet-down": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(420px)" },
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
