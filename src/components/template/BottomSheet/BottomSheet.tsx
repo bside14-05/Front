@@ -7,7 +7,7 @@ interface ModalBottomProps {
   onClose(): void;
   children: React.ReactNode;
 }
-// translate-y-[420px]
+
 /**
  * Modal Bottom Sheet
  * - 밑에서 위로 자연스럽게 올라오는 모달
@@ -15,11 +15,15 @@ interface ModalBottomProps {
 export default function BottomSheet({ onClose, children }: ModalBottomProps) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, []);
 
   return (
     <Portal selector="modal">
-      <div className="w-screen h-screen bg-black/50 absolute top-0 left-0 flex justify-center items-end z-10">
+      <div className="fixed top inset-0 bg-black/50 z-10 flex justify-center items-end">
         <div
           className={cn(
             "relative w-full max-w-screen-md h-[420px] bg-white rounded-t-lg px-4 pb-10 animate-[bottom-sheet-up_200ms_ease-in-out]"

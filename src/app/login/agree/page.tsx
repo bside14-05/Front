@@ -2,14 +2,13 @@
 
 import Button from "@/components/common/button";
 import Checkbox from "@/components/common/checkbox";
-import Modal from "@/components/common/modal";
+import ExitModal from "@/components/my/modal/ExitModal";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function LoginAgreePage() {
   const [checkedAll, setCheckedAll] = useState(false);
-
   const [checkedOne, setCheckedOne] = useState(false);
   const [checkedTwo, setCheckedTwo] = useState(false);
 
@@ -92,7 +91,7 @@ function LoginAgreePage() {
         </Button>
       </div>
 
-      {modal && <Modal visible={modal} onClose={() => setModal(!modal)} />}
+      {modal && <ExitModal onClose={() => setModal(!modal)} />}
     </section>
   );
 }
