@@ -1,9 +1,6 @@
 "use client";
 import { useState } from "react";
-
-import Footer from "@/components/my/Footer";
 import Card from "@/components/template/Card";
-import Header from "@/components/template/Header";
 import { FilterBottomSheet } from "@/components/bookstore/BottomSheet";
 
 export default function BookStorePage() {
@@ -11,7 +8,6 @@ export default function BookStorePage() {
 
   return (
     <>
-      <Header />
       <div className="h-full mt-8">
         <h1 className="px-4 text-4xl font-light mb-10">Book Store</h1>
 
@@ -36,7 +32,6 @@ export default function BookStorePage() {
           ))}
         </section>
       </div>
-      <Footer />
 
       {modalVisible && (
         <FilterBottomSheet onClose={() => setModalVisible(!modalVisible)} />

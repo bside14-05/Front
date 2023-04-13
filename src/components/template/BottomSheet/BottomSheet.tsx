@@ -23,10 +23,10 @@ export default function BottomSheet({ onClose, children }: ModalBottomProps) {
 
   return (
     <Portal selector="modal">
-      <div className="fixed top inset-0 bg-black/50 z-10">
+      <div className="fixed top inset-0 bg-black/50 z-10 flex justify-center items-end">
         <div
           className={cn(
-            "absolute bottom-0 left-0 w-full max-w-screen-md h-[420px] bg-white rounded-t-lg px-4 pb-10 animate-[bottom-sheet-up_200ms_ease-in-out]"
+            "relative w-full max-w-screen-md h-[420px] bg-white rounded-t-lg px-4 pb-10 animate-[bottom-sheet-up_200ms_ease-in-out]"
           )}
         >
           <div
