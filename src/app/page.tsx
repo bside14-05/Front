@@ -34,32 +34,23 @@ function Main() {
 
   return (
     <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
-      <div className="flex items-center h-[50px]">Book Nook</div>
+      <div className=" h-[184px] w-full bg-gray-300"></div>
       <div className=" h-full m-auto">
-        <div className="relative">
-          <div className="relative bg-black z-20 h-[68px] w-1/2 mb-[-42px] text-white p-[12px] ">
-            <div className="text-sm">{"여행의 순간을 담은 지민의 공간"}</div>
+        <div className="flex justify-center items-center h-[118px]">
+          <div className="border-b-2 border-black">book store</div>
+        </div>
+        <div className="flex justify-center">
+          <div className="m-[4px]">
+            <div className="bg-gray-400 h-[220px] w-[167px] mb-[10px]"></div>
+            <div className="bg-gray-400 h-[167px] w-[167px]"></div>
           </div>
-          <div className="relative flex h-[178px] z-10 w-full">
-            <div className="relative w-2/5">
-              <div className="absolute bottom-0">
-                <div>adress</div>
-                <div className="text-[19px]">{"title -->"}</div>
-              </div>
-            </div>
-            <div className="bg-yellow-200 w-3/5"></div>
+          <div className="m-[4px]">
+            <div className="bg-gray-400 h-[167px] w-[167px] mb-[10px] "></div>
+            <div className="bg-gray-400 h-[220px] w-[167px]"></div>
           </div>
         </div>
-        <div className="flex justify-center h-[50px]">ㅡ ㅡ ㅡ</div>
-        <Filter />
-        <div className="flex flex-wrap">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
+        <div className="bg-slate-500 h-[160px]">footer</div>
       </div>
-      <NavMenu />
     </div>
   );
 }
