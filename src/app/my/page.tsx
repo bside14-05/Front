@@ -3,9 +3,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import Footer from "@/components/my/Footer";
+import Footer from "@/components/common/footer";
 import Header from "@/components/my/Header";
-import UserInfo from "@/components/linkList/userInfo";
+import UserInfo from "@/components/linkList/UserInfo";
 
 const LIST = [
   { id: 0, title: "서점", adress: "00시 00구" },

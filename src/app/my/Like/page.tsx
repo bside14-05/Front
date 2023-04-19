@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
-
-import Footer from "@/components/my/Footer";
-import Header from "@/components/my/Header";
+import React, { useState } from "react";
+import LNB from "@/components/lnb";
 import List from "@/components/linkList/List";
-import UserInfo from "@/components/linkList/userInfo";
+import UserInfo from "@/components/linkList/UserInfo";
+import Footer from "@/components/common/footer";
+import Header from "@/components/template/Header";
 
 const LIST = [
   { id: 0, name: "서점", adress: "00시 00구", like: true },
@@ -22,21 +22,32 @@ const LIST = [
 
 function LikePage() {
   const [hydrated, setHydrated] = React.useState(false);
+
+  const [isLNBVisible, setIsLNBVisible] = useState(false);
+
+  const handleClick = (status: boolean) => {
+    setIsLNBVisible(status);
+  };
+
   React.useEffect(() => {
     setHydrated(true);
   }, []);
 
   if (!hydrated) return <></>;
+
   return (
-    <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
-      <Header />
-      <UserInfo />
-      <section className="w-full mb-4">
-        <div>찜 목록 : {LIST.length}</div>
-        <List list={LIST} />
-      </section>
-      <Footer />
-    </div>
+    <>
+      <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
+        <Header onLNBOpen={() => handleClick(true)} />
+        <UserInfo />
+        <section className="w-full mb-4">
+          <div className="mb-[16px]">찜목록 {LIST.length}</div>
+          <List list={LIST} />
+        </section>
+        <Footer />
+      </div>
+      {isLNBVisible && <LNB onClose={() => handleClick(false)} />}
+    </>
   );
 }
 
