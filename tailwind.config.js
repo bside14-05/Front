@@ -29,6 +29,9 @@ module.exports = {
         dim1: "rgba(0, 0, 0, 0.5)",
         dim2: "rgba(0, 0, 0, 0.9)",
       },
+      fontFamily: {
+        sans: ["var(--font-main)"],
+      },
 
       keyframes: {
         "bottom-sheet-up": {

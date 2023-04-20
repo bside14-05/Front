@@ -2,15 +2,8 @@
 
 import React from "react";
 
-import Footer from "@/components/my/Footer";
-import Header from "@/components/my/Header";
-import LikeList from "@/components/my/main/LikeList";
-
 import { PATH_MENU } from "@/paths/path";
 import { useRouter } from "next/navigation";
-import NavMenu from "@/components/main/NavMenu";
-import Card from "@/components/main/Card";
-import Filter from "@/components/main/Filter";
 
 const LIST = [
   { id: 0, title: "서점", adress: "00시 00구" },
@@ -35,7 +28,7 @@ function Main() {
   return (
     <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
       <div className=" h-[184px] w-full bg-gray-300"></div>
-      <div className=" h-full m-auto">
+      <div className="h-full m-auto ">
         <div className="flex justify-center items-center h-[118px]">
           <div className="border-b-2 border-black">book store</div>
         </div>
