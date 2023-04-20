@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "@/components/template/Card";
 import { FilterBottomSheet } from "@/components/bookstore/BottomSheet";
 
-export default function BookStorePage() {
+export default function BSListPage() {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (

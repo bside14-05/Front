@@ -1,8 +1,8 @@
 import BaseLayout from "@/components/layout/BaseLayout";
 
 export const metadata = {
-  title: "서점 리스트 - BookNook",
-  description: "서점 리스트 페이지 입니다.",
+  title: "서점 상세 - BookNook",
+  description: "서점 상세 페이지",
 };
 
 interface BookStoreLayoutProps {
@@ -10,9 +10,5 @@ interface BookStoreLayoutProps {
 }
 
 export default function BookStoreLayout({ children }: BookStoreLayoutProps) {
-  return (
-    <BaseLayout>
-      <main className="min-h-screen max-w-screen-md mx-auto">{children}</main>
-    </BaseLayout>
-  );
+  return <BaseLayout>{children}</BaseLayout>;
 }
