@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/app/**/*.{html,js,tsx,ts}",
@@ -8,6 +9,10 @@ module.exports = {
     screens: {
       sm: { min: "375px", max: "767px" },
       md: "768px",
+    },
+    fontFamily: {
+      Pretendard: ["Pretendard , sans-serif"],
+      CelloGX: ["RegularBoldCelloGX , sans-serif"],
     },
 
     extend: {
@@ -28,9 +33,6 @@ module.exports = {
         },
         dim1: "rgba(0, 0, 0, 0.5)",
         dim2: "rgba(0, 0, 0, 0.9)",
-      },
-      fontFamily: {
-        sans: ["var(--font-main)"],
       },
 
       keyframes: {

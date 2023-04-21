@@ -4,5 +4,6 @@ import close from "./close.svg";
 import menu from "./menu.svg";
 import bookmark from "./bookmark.svg";
 import bookmarkFill from "./bookmark-fill.svg";
+import booknook from "./booknook.svg";
 
-export { check, kakao, close, menu, bookmark, bookmarkFill };
+export { check, kakao, close, menu, bookmark, bookmarkFill, booknook };

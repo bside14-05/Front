@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* Custom CSS */
+
 .custom-list-style-dash::before {
   display: inline-block;
   vertical-align: middle;
