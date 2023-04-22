@@ -1,10 +1,10 @@
 import axios, { AxiosInstance } from "axios";
 
-const instance: AxiosInstance = axios.create({
+export const instance: AxiosInstance = axios.create({
   baseURL: process.env.asdasdas,
 });
 
-const nextInstance: AxiosInstance = axios.create({
+export const nextInstance: AxiosInstance = axios.create({
   baseURL: "/api",
 });
 

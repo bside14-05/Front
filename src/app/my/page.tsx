@@ -3,8 +3,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import Footer from "@/components/my/Footer";
+import Footer from "@/components/common/footer";
 import Header from "@/components/my/Header";
+import UserInfo from "@/components/linkList/UserInfo";
 
 const LIST = [
   { id: 0, title: "서점", adress: "00시 00구" },
@@ -29,10 +30,7 @@ function My() {
   return (
     <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
       <Header />
-      <section className="flex mb-4  justify-between border-b-2 border-black py-4">
-        <div className="py-6 text-6xl">MY</div>
-        <div className="py-6 text-lg self-end">asdasdasd@asdasdad.com</div>
-      </section>
+      <UserInfo />
       <section className="w-full mb-4">
         <Info />
       </section>
