@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import LNB from "@/components/lnb";
-import Footer from "@/components/my/Footer";
+import Footer from "@/components/common/footer";
 import Header from "@/components/template/Header";
 
 /**
