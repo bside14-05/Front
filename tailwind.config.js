@@ -10,12 +10,12 @@ module.exports = {
       sm: { min: "375px", max: "767px" },
       md: "768px",
     },
-    fontFamily: {
-      Pretendard: ["Pretendard , sans-serif"],
-      CelloGX: ["RegularBoldCelloGX , sans-serif"],
-    },
 
     extend: {
+      fontFamily: {
+        Pretendard: ["var(--font-Pretendard)"],
+        CelloGX: ["RegularBoldCelloGX"],
+      },
       colors: {
         gray: {
           1: "#212121",

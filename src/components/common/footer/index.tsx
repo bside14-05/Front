@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "../../../../public/font/font.css";
 
 import Icon from "../icon";
 

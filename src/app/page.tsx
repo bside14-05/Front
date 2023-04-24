@@ -1,22 +1,45 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-import { PATH_MENU } from "@/paths/path";
 import { useRouter } from "next/navigation";
 
-const LIST = [
-  { id: 0, title: "서점", adress: "00시 00구" },
-  { id: 1, title: "서점2", adress: "00시 00구2" },
-];
+import { PATH_MENU } from "@/paths/path";
+
+import Button from "@/components/common/button";
+import Icon from "@/components/common/icon";
+import Footer from "@/components/common/footer";
+import Header from "@/components/template/Header";
+
+import "../../public/fonts/font.css";
 
 function Main() {
   const [hydrated, setHydrated] = React.useState(false);
 
-  const router = useRouter();
+  const [isLNBVisible, setIsLNBVisible] = useState(false);
 
-  const handleClick = () => {
-    router.push(PATH_MENU.my.main);
+  const router = useRouter();
+  const handleHeaderClick = (status: boolean) => {
+    setIsLNBVisible(status);
+  };
+
+  const handleClick = (moveUrl: string) => {
+    router.push(PATH_MENU.my.main + `? + ${moveUrl}`);
+  };
+
+  const menuCard = (text: string, title: string, moveUrl: string) => {
+    return (
+      <div className="relative w-1/2 text-sm px-[16px] py-[32px] order-b-[1px] border-black">
+        <p className="absolute top-[12px] whitespace-pre-wrap">{title}</p>
+        <div className="h-[180px] w-[155px] border-black border-[1px]">
+          image
+        </div>
+        <div className="flex items-center justify-between">
+          <div onClick={() => handleClick(moveUrl)}>{text}</div>
+          <Icon name={"circleInArrow"}></Icon>
+        </div>
+      </div>
+    );
   };
 
   React.useEffect(() => {
@@ -24,27 +47,44 @@ function Main() {
   }, []);
 
   if (!hydrated) return <></>;
-
   return (
-    <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
-      <div className=" h-[184px] w-full bg-gray-300"></div>
-      <div className="h-full m-auto ">
-        <div className="flex justify-center items-center h-[118px]">
-          <div className="border-b-2 border-black">book store</div>
+    <>
+      <Header onLNBOpen={() => handleHeaderClick(true)} />
+      <div
+        className={`sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max`}
+      >
+        <div className="flex justify-center items-center h-[226px]">
+          <Icon name="mainLogo" />
         </div>
-        <div className="flex justify-center">
-          <div className="m-[4px]">
-            <div className="bg-gray-400 h-[220px] w-[167px] mb-[10px]"></div>
-            <div className="bg-gray-400 h-[167px] w-[167px]"></div>
-          </div>
-          <div className="m-[4px]">
-            <div className="bg-gray-400 h-[167px] w-[167px] mb-[10px] "></div>
-            <div className="bg-gray-400 h-[220px] w-[167px]"></div>
+        <div
+          className={`py-[12px] border-y-[1px] border-black font-CelloGX text-xl`}
+        >
+          <div className="px-[16px]">Book store with</div>
+        </div>
+        <div>
+          <div className="border-t-[1px] border-black">
+            <div className="flex border-b-[1px] border-black">
+              {menuCard(
+                "커피 혹은 술과 함께",
+                `Coffee /\nAlcohol-beverage`,
+                ""
+              )}
+              <div className="border-l border-black"></div>
+              {menuCard("예술 혹은 전시가 있는", `Art /\nExhibition`, "")}
+            </div>
+            <div className="flex border-b-[1px] border-black">
+              {menuCard("굿즈/소품이 있는", "Goods", "")}
+              <div className="border-l border-black"></div>
+              {menuCard("프로그램과 함께", "Programs", "")}
+            </div>
           </div>
         </div>
-        <div className="bg-slate-500 h-[160px]">footer</div>
+        <div className="px-[16px] mt-[24px] mb-[80px]">
+          <Button type="normal">And more</Button>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
