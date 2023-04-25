@@ -10,8 +10,7 @@ import Button from "@/components/common/button";
 import Icon from "@/components/common/icon";
 import Footer from "@/components/common/footer";
 import Header from "@/components/template/Header";
-
-import "../../public/fonts/font.css";
+import Lnb from "@/components/lnb";
 
 function Main() {
   const [hydrated, setHydrated] = React.useState(false);
@@ -29,8 +28,10 @@ function Main() {
 
   const menuCard = (text: string, title: string, moveUrl: string) => {
     return (
-      <div className="relative w-1/2 text-sm pb-[16px] pt-[48px] px-[16px] order-b-[1px] border-black">
-        <p className="absolute top-[24px] whitespace-pre-wrap z-10">{title}</p>
+      <div className="relative w-1/2 text-sm pb-[16px] pt-[52px] px-[16px] order-b-[1px] border-black">
+        <p className="absolute top-[24px] whitespace-pre-wrap z-10 text-2xl">
+          {title}
+        </p>
         <div className="h-[180px] w-[155px] border-black border-[1px] mb-[12px] z-0"></div>
         <div className="flex items-center justify-between">
           <div onClick={() => handleClick(moveUrl)}>{text}</div>
@@ -57,7 +58,9 @@ function Main() {
         <div
           className={`sticky top-[72px] py-[12px] border-y-[1px] border-black font-CelloGX text-xl bg-white z-20`}
         >
-          <div className="px-[16px] bg-white ">Book store with</div>
+          <div className={`px-[16px] bg-white font-CelloGX`}>
+            Book store with
+          </div>
         </div>
         <div>
           <div className="border-t-[1px] border-black">
@@ -82,6 +85,7 @@ function Main() {
         </div>
       </div>
       <Footer />
+      {isLNBVisible && <Lnb onClose={() => handleHeaderClick(false)} />}
     </>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Icon from "@/components/common/icon/Icon";
 import { useEffect, useState } from "react";
 import Button from "../../common/button";
 
@@ -26,8 +27,10 @@ function LikeList({ list, category, emptyText }: Iprops) {
   return (
     <div className="border-2 p-4">
       <header className="flex justify-between mb-4">
-        <div>{`${category} ( ${updateList.length} )`}</div>
-        <div onClick={handleClick}>{">"}</div>
+        <div className="text-gray-4 text-sm">{`${category} ( ${updateList.length} )`}</div>
+        <div onClick={handleClick}>
+          <Icon name={"rightArrow"} />
+        </div>
       </header>
       <div className="flex">
         {updateList.map((item) => (
@@ -35,10 +38,10 @@ function LikeList({ list, category, emptyText }: Iprops) {
             <div className="w-[150px] mr-2">
               <div className="bg-black h-[100px] mb-2">image</div>
               <div className="flex justify-between">
-                <div>{item.title}</div>
-                <div>icon</div>
+                <div className="text-sm">{item.title}</div>
+                <Icon name="likeActive" />
               </div>
-              <div>{item.adress}</div>
+              <div className="text-gray-5 text-xs">{item.adress}</div>
             </div>
           </div>
         ))}

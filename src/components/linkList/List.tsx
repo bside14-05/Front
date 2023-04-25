@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Icon from "@/components/common/icon";
+
 interface Item {
   id: number;
   name: string;
@@ -17,11 +19,11 @@ const Card = (contents: Item) => (
       <Image src={""} alt={""} />
     </div>
     <div>
-      <div>
-        <div>{contents.name}</div>
-        <div>{contents.like}</div>
+      <div className="flex justify-between">
+        <div className="text-sm">{contents.name}</div>
+        {contents.like ? <Icon name={"likeActive"} /> : <></>}
       </div>
-      <div>{contents.adress}</div>
+      <div className="text-gray-4 text-xs">{contents.adress}</div>
     </div>
   </div>
 );

@@ -37,16 +37,18 @@ function LikePage() {
 
   return (
     <>
+      <Header onLNBOpen={() => handleClick(true)} />
       <div className="sm:w-full md:w-[768px] mx-auto [calc(100vh-50px)]-h-max px-[16px]">
-        <Header onLNBOpen={() => handleClick(true)} />
         <UserInfo />
         <section className="w-full mb-4">
-          <div className="mb-[16px]">찜목록 {LIST.length}</div>
+          <div className="mb-[16px]">
+            찜목록 <span className="font-bold">{LIST.length}</span>
+          </div>
           <List list={LIST} />
         </section>
-        <Footer />
       </div>
       {isLNBVisible && <LNB onClose={() => handleClick(false)} />}
+      <Footer />
     </>
   );
 }

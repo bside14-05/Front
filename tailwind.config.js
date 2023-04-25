@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Pretendard: ["var(--font-Pretendard)"],
-        CelloGX: ["RegularBoldCelloGX"],
+        CelloGX: ["var(--font-RegularBoldCelloGX)"],
       },
       colors: {
         gray: {

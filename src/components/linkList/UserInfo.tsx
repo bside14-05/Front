@@ -1,8 +1,10 @@
 function UserInfo() {
   return (
-    <section className="flex mb-4  justify-between border-b-2 border-black py-4">
-      <div className="py-6 text-6xl">MY</div>
-      <div className="py-6 text-lg self-end">asdasdasd@asdasdad.com</div>
+    <section className="flex mb-[27px] justify-between border-b-2 border-black py-4">
+      <div className=" text-4xl font-CelloGX">MY</div>
+      <div className=" text-base self-end max-w-[240px] flex flex-wrap break-all text-end">
+        asdasddasdasdasasasdasd@asdasdad.com
+      </div>
     </section>
   );
 }
