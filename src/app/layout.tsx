@@ -42,8 +42,8 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={`font-sans`}>
-        <div>{children}</div>
+      <body>
+        <div className={`relative`}>{children}</div>
         <div id="modal"></div>
       </body>
     </html>

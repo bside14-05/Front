@@ -29,11 +29,9 @@ function Main() {
 
   const menuCard = (text: string, title: string, moveUrl: string) => {
     return (
-      <div className="relative w-1/2 text-sm px-[16px] py-[32px] order-b-[1px] border-black">
-        <p className="absolute top-[12px] whitespace-pre-wrap">{title}</p>
-        <div className="h-[180px] w-[155px] border-black border-[1px]">
-          image
-        </div>
+      <div className="relative w-1/2 text-sm pb-[16px] pt-[48px] px-[16px] order-b-[1px] border-black">
+        <p className="absolute top-[24px] whitespace-pre-wrap z-10">{title}</p>
+        <div className="h-[180px] w-[155px] border-black border-[1px] mb-[12px] z-0"></div>
         <div className="flex items-center justify-between">
           <div onClick={() => handleClick(moveUrl)}>{text}</div>
           <Icon name={"circleInArrow"}></Icon>
@@ -57,9 +55,9 @@ function Main() {
           <Icon name="mainLogo" />
         </div>
         <div
-          className={`py-[12px] border-y-[1px] border-black font-CelloGX text-xl`}
+          className={`sticky top-[72px] py-[12px] border-y-[1px] border-black font-CelloGX text-xl bg-white z-20`}
         >
-          <div className="px-[16px]">Book store with</div>
+          <div className="px-[16px] bg-white ">Book store with</div>
         </div>
         <div>
           <div className="border-t-[1px] border-black">
