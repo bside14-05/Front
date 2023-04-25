@@ -13,7 +13,8 @@ export const PATH_MENU = {
   },
   my: {
     main: "/my",
-    profil: "/profil",
+    like: "my/like",
+    profil: "my/profil",
   },
   taste: {
     detail: (id: number) => `/taste/${id}`,
