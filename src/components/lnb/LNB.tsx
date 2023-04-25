@@ -1,12 +1,19 @@
 import Modal from "@/components/template/Modal";
+import { PATH_MENU } from "@/paths/path";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface LNBProps {
   onClose: () => void;
 }
 
 export default function LNB({ onClose }: LNBProps) {
+  const { push } = useRouter();
+
+  const toUrl = (url: string) => {
+    push(url);
+  };
   return (
     <Modal onClose={onClose} isFull>
       <main className="px-9 mt-4">
@@ -19,7 +26,9 @@ export default function LNB({ onClose }: LNBProps) {
           />
         </div>
 
-        <p className="mb-6">로그인/회원가입 &gt; </p>
+        <p className="mb-6" onClick={() => toUrl(PATH_MENU.my.main)}>
+          로그인/회원가입 &gt;{" "}
+        </p>
 
         <hr className="bg-[#212121] h-px border-0" />
 

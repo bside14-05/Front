@@ -21,7 +21,7 @@ const Card = (contents: Item) => (
     <div>
       <div className="flex justify-between">
         <div className="text-sm">{contents.name}</div>
-        {contents.like ? <Icon name={"likeActive"} /> : <></>}
+        {contents.like ? <Icon name={"bookmarkFill"} /> : <></>}
       </div>
       <div className="text-gray-4 text-xs">{contents.adress}</div>
     </div>

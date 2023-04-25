@@ -28,14 +28,16 @@ function Main() {
 
   const menuCard = (text: string, title: string, moveUrl: string) => {
     return (
-      <div className="relative w-1/2 text-sm pb-[16px] pt-[52px] px-[16px] order-b-[1px] border-black">
-        <p className="absolute top-[24px] whitespace-pre-wrap z-10 text-2xl">
-          {title}
-        </p>
-        <div className="h-[180px] w-[155px] border-black border-[1px] mb-[12px] z-0"></div>
-        <div className="flex items-center justify-between">
-          <div onClick={() => handleClick(moveUrl)}>{text}</div>
-          <Icon name={"circleInArrow"}></Icon>
+      <div className="flex justify-center relative w-1/2 text-sm pb-[16px] pt-[52px] order-b-[1px] border-black">
+        <div>
+          <p className="absolute top-[24px] whitespace-pre-wrap z-10 text-2xl">
+            {title}
+          </p>
+          <div className="h-[180px] w-[155px] border-black border-[1px] mb-[12px] z-0"></div>
+          <div className="flex items-center justify-between">
+            <div onClick={() => handleClick(moveUrl)}>{text}</div>
+            <Icon name={"circleInArrow"}></Icon>
+          </div>
         </div>
       </div>
     );
@@ -64,7 +66,7 @@ function Main() {
         </div>
         <div>
           <div className="border-t-[1px] border-black">
-            <div className="flex border-b-[1px] border-black">
+            <div className="flex  border-b-[1px] border-black">
               {menuCard(
                 "커피 혹은 술과 함께",
                 `Coffee /\nAlcohol-beverage`,

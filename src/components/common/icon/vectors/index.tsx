@@ -7,7 +7,6 @@ import bookmarkFill from "./bookmark-fill.svg";
 import booknook from "./booknook.svg";
 import circleInArrow from "./circleInArrow.svg";
 import mainLogo from "./mainLogo.svg";
-import likeActive from "./likeActive.svg";
 import rightArrow from "./rightArrow.svg";
 export {
   check,
@@ -19,6 +18,5 @@ export {
   booknook,
   circleInArrow,
   mainLogo,
-  likeActive,
   rightArrow,
 };

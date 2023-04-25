@@ -8,11 +8,14 @@ import UserInfo from "@/components/linkList/UserInfo";
 import Lnb from "@/components/lnb";
 import Header from "@/components/template/Header";
 import ExitModal from "@/components/my/modal/ExitModal";
+import { PATH_MENU } from "@/paths/path";
 
 const LIST = [
   { id: 0, title: "서점", adress: "00시 00구" },
   { id: 1, title: "서점2", adress: "00시 00구2" },
 ];
+
+const ONE_LIST = [{ id: 0, title: "서점", adress: "00시 00구" }];
 
 const Info = dynamic(() => import("@/components/my/main/Info"), {
   ssr: false,
@@ -49,17 +52,19 @@ function My() {
           <Info />
         </section> */}
         <section className="mb-[47px]">
-          <div className="mb-2 text-base  ">찜목록</div>
+          <div className="mb-2 text-base">찜목록</div>
           <div className="mb-2">
             <LikeList
               list={LIST}
+              toUrl={PATH_MENU.my.like}
               category={"서점"}
               emptyText={"서점 찜하러 가기"}
             />
           </div>
           <div>
             <LikeList
-              list={LIST}
+              list={ONE_LIST}
+              toUrl={PATH_MENU.my.like}
               category={"프로그램"}
               emptyText={"프로그램 찜하러 가기"}
             />
