@@ -47,8 +47,12 @@ export default function ExitModal({ onClose }: ExitModalProps) {
         </div>
 
         <div className="flex">
-          <Button type="normal">탈퇴하기</Button>
-          <Button type="outline">다시생각하기</Button>
+          <Button type="normal" disabled={!checked}>
+            탈퇴하기
+          </Button>
+          <Button type="outline" onClick={onClose}>
+            다시생각하기
+          </Button>
         </div>
       </>
     </Modal>

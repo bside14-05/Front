@@ -14,11 +14,10 @@ function Card() {
       <div className="h-[187px]"></div>
       <div className="p-[16px] h-[118px] bg-[#FAFAFA]">
         <div className="flex justify-between">
-          <div className="font-medium text-lg mb-[10px]">Title</div>
+          <div className="font-medium text-sm mb-[10px]">Title</div>
           {IconWrapper()}
         </div>
-        <div className="text-sm  mb-[10px]">adress</div>
-        <div className="font-medium text-sm">category</div>
+        <div className="text-xs  mb-[10px]">adress</div>
       </div>
     </div>
   );

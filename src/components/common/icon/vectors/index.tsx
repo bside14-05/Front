@@ -5,5 +5,20 @@ import menu from "./menu.svg";
 import bookmark from "./bookmark.svg";
 import bookmarkFill from "./bookmark-fill.svg";
 import booknook from "./booknook.svg";
-
-export { check, kakao, close, menu, bookmark, bookmarkFill, booknook };
+import circleInArrow from "./circleInArrow.svg";
+import mainLogo from "./mainLogo.svg";
+import likeActive from "./likeActive.svg";
+import rightArrow from "./rightArrow.svg";
+export {
+  check,
+  kakao,
+  close,
+  menu,
+  bookmark,
+  bookmarkFill,
+  booknook,
+  circleInArrow,
+  mainLogo,
+  likeActive,
+  rightArrow,
+};

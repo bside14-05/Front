@@ -15,7 +15,7 @@ function Button({
 }: Iprops) {
   const typeStyle = (type: Iprops["type"]) => {
     if (type === "normal")
-      return "text-white bg-black active:bg-gray-700 disabled:bg-black";
+      return "text-white bg-black active:bg-gray-700 disabled:bg-gray-4";
     if (type === "outline") return "border-2";
   };
 
