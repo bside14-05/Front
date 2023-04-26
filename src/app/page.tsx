@@ -18,6 +18,7 @@ function Main() {
   const [isLNBVisible, setIsLNBVisible] = useState(false);
 
   const router = useRouter();
+
   const handleHeaderClick = (status: boolean) => {
     setIsLNBVisible(status);
   };
