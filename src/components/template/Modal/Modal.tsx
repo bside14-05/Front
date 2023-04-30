@@ -23,7 +23,7 @@ export default function Modal({ onClose, children, isFull }: ModalProps) {
 
   return (
     <Portal selector="modal">
-      <div className="fixed  z-50 inset-0 bg-black/50 flex justify-center items-center">
+      <div className="fixed z-50 inset-0 bg-black/50 flex justify-center items-center">
         <div
           className={cn(
             "max-w-screen-md relative bg-white mx-4",
@@ -38,7 +38,7 @@ export default function Modal({ onClose, children, isFull }: ModalProps) {
             onClick={onClose}
           >
             {isFull ? (
-              <Icon name="close" width={32} height={32} />
+              <Icon name="close" width={32} height={32} viewBox="0 0 22 22" />
             ) : (
               <Icon name="close" width={20} height={20} />
             )}
