@@ -8,6 +8,9 @@ import booknook from "./booknook.svg";
 import circleInArrow from "./circleInArrow.svg";
 import mainLogo from "./mainLogo.svg";
 import rightArrow from "./rightArrow.svg";
+import filter from "./filter.svg";
+import order from "./order.svg";
+
 export {
   check,
   kakao,
@@ -19,4 +22,6 @@ export {
   circleInArrow,
   mainLogo,
   rightArrow,
+  filter,
+  order,
 };

@@ -7,15 +7,24 @@ interface IconProps {
   name: IconName;
   width?: number;
   height?: number;
+  viewBox?: string;
   className?: string;
 }
 
-function Icon({ name, className }: IconProps) {
+function Icon({ name, width, height, viewBox, className }: IconProps) {
   const Vector = vectors[name];
 
-  // if (width && height) {
-  //   return <Vector className={className} width={width} height={height} />;
-  // }
+  if (width && height) {
+    return (
+      <Vector
+        className={className}
+        width={width}
+        height={height}
+        viewBox={viewBox}
+        stroke={"currentColor"}
+      />
+    );
+  }
 
   return <Vector className={className} />;
 }

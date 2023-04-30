@@ -26,17 +26,23 @@ export default function BottomSheet({ onClose, children }: ModalBottomProps) {
       <div className="fixed top inset-0 bg-black/50 z-10 flex justify-center items-end">
         <div
           className={cn(
-            "relative w-full max-w-screen-md h-[420px] bg-white rounded-t-lg px-4 pb-10 animate-[bottom-sheet-up_200ms_ease-in-out]"
+            "relative w-full max-w-screen-md h-[420px] bg-white px-4 pb-10 animate-[bottom-sheet-up_200ms_ease-in-out]"
           )}
         >
           <div
-            className="absolute top-[-48px] left-[50%] translate-x-[-50%] bg-white p-2 rounded-full"
+            className="absolute top-[-48px] right-[4px] p-2 rounded-full"
             onClick={onClose}
           >
-            <Icon name="close" />
+            <Icon
+              name="close"
+              className="stroke-white"
+              width={32}
+              height={32}
+              viewBox="0 0 22 22"
+            />
           </div>
 
-          <div className="w-12 h-1 rounded bg-[#909090] mx-auto mt-3 mb-7" />
+          {/* <div className="w-12 h-1 rounded bg-[#909090] mx-auto mt-3 mb-7" /> */}
           {children}
         </div>
       </div>
