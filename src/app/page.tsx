@@ -66,7 +66,7 @@ function Main() {
           </div>
         </div>
         <div>
-          <div className="border-t-[1px] border-black">
+          <div className="">
             <div className="flex  border-b-[1px] border-black">
               {menuCard(
                 "커피 혹은 술과 함께",
