@@ -37,10 +37,10 @@ function LikeList({ list, category, emptyText, toUrl }: Iprops) {
           <Icon name={"rightArrow"} />
         </div>
       </header>
-      <div className="flex">
+      <div className="grid grid-cols-2 gap-2">
         {updateList.map((item) => (
-          <div key={item.id} className="flex">
-            <div className="w-[150px] mr-2">
+          <div key={item.id} className="">
+            <div className="w-full mr-2">
               <div className="bg-black h-[100px] mb-2">image</div>
               <div className="flex justify-between">
                 <div className="text-sm">{item.title}</div>

@@ -15,7 +15,7 @@ interface Props {
 
 const Card = (contents: Item) => (
   <div>
-    <div className="h-[109px] w-[109px] bg-black">
+    <div className="h-[109px] w-full bg-black mb-[8px]">
       <Image src={""} alt={""} />
     </div>
     <div>
@@ -30,9 +30,9 @@ const Card = (contents: Item) => (
 
 function List({ list }: Props) {
   return (
-    <div className="flex flex-wrap p-[2px]">
+    <div className="grid grid-cols-3 gap-2 p-[2px]">
       {list.map((item) => (
-        <div key={item.id} className="h-[176px] w-[109px] mx-[2px]">
+        <div key={item.id} className="">
           {Card(item)}
         </div>
       ))}
